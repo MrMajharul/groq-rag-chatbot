@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Python",
+    "content": "Python is a high-level programming language used for web development, automation, data science, and artificial intelligence."
+  },
+  {
+    "id": 2,
+    "title": "Artificial Intelligence",
+    "content": "Artificial Intelligence enables computers to perform tasks such as learning, reasoning, and problem-solving."
+  },
+  {
+    "id": 3,
+    "title": "Database",
+    "content": "A database is an organized collection of information that can be stored, searched, and updated."
+  },
+  {
+    "id": 4,
+    "title": "Computer Networks",
+    "content": "Computer networks connect devices to exchange data and share resources."
+  }
+]

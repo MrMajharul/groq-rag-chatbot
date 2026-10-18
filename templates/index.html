@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Groq AI Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="app">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <div>
+                    <h2>Groq AI</h2>
+                    <p>Knowledge Assistant</p>
+                </div>
+            </div>
+
+            <button id="new-chat" class="new-chat">
+                <span>＋</span> New Chat
+            </button>
+
+            <div class="sidebar-info">
+                <span class="status-dot"></span>
+                AI Assistant
+                <p>Powered by Groq API</p>
+            </div>
+
+            <div class="sidebar-bottom">
+                <span class="small-icon">✧</span>
+                <span>RAG Knowledge Chatbot</span>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h3>AI Assistant</h3>
+                    <p><span class="status-dot"></span> Ready to help</p>
+                </div>
+                <div class="model-tag">GPT-OSS 120B</div>
+            </header>
+
+            <section id="chat-box" class="chat-box">
+
+                <div id="welcome" class="welcome">
+                    <div class="welcome-icon">✦</div>
+
+                    <h1>How can I help you?</h1>
+
+                    <p>
+                        Ask a question and I'll search the knowledge
+                        database to help you find an answer.
+                    </p>
+
+                    <div class="suggestions">
+                        <button class="suggestion"
+                                data-question="What is artificial intelligence?">
+                            <span>✧</span>
+                            <span>
+                                <strong>Artificial Intelligence</strong>
+                                <small>Learn about AI</small>
+                            </span>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion"
+                                data-question="What is Python?">
+                            <span>⌘</span>
+                            <span>
+                                <strong>Python Programming</strong>
+                                <small>Explore programming</small>
+                            </span>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion"
+                                data-question="What is a database?">
+                            <span>▤</span>
+                            <span>
+                                <strong>Database Systems</strong>
+                                <small>Understand databases</small>
+                            </span>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion"
+                                data-question="What are computer networks?">
+                            <span>◎</span>
+                            <span>
+                                <strong>Computer Networks</strong>
+                                <small>Discover networking</small>
+                            </span>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="messages" class="messages"></div>
+            </section>
+
+            <footer class="composer-area">
+                <form id="chat-form" class="composer">
+                    <textarea
+                        id="user-input"
+                        placeholder="Message your AI assistant..."
+                        rows="1"
+                        aria-label="Your message"
+                    ></textarea>
+
+                    <button type="submit" id="send-button"
+                            class="send-button" aria-label="Send message">
+                        ↑
+                    </button>
+                </form>
+
+                <p class="disclaimer">
+                    AI can make mistakes. Verify important information.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
